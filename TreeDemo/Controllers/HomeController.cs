@@ -12,17 +12,27 @@ namespace TreeDemo.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        
+        public ActionResult TreeDnd()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "angular-tree-dnd plugin";
+            ViewBag.Link = @"https://github.com/thienhung1989/angular-tree-dnd";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult UiTree()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "angular-ui-tree plugin";
+            ViewBag.Link = @"https://github.com/angular-ui-tree/angular-ui-tree";
+
+            return View();
+        }
+
+        public ActionResult NgJsTree()
+        {
+            ViewBag.Message = "ngJsTree plugin";
+            ViewBag.Link = @"https://github.com/ezraroi/ngJsTree";
 
             return View();
         }
