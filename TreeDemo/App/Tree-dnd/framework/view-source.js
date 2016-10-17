@@ -6,7 +6,7 @@ app.directive(
                     demoName:       '@viewSource',
                     highlightLines: '='
                 },
-                templateUrl: 'framework/view-source.html',
+                templateUrl: '/App/Tree-dnd/framework/view-source.html',
                 link:        function (scope/*, element, attr*/) {
 
                     scope.models = {
@@ -32,7 +32,7 @@ app.directive(
 
                     angular.forEach(
                         scope.models.types, function (type) {
-                            $http.get(scope.demoName + '/' + scope.demoName + '.' + type.extension)
+                            $http.get('/App/Tree-dnd/' + scope.demoName + '/' + scope.demoName + '.' + type.extension)
                                 .success(
                                 function (data) {
                                     type.source = data;

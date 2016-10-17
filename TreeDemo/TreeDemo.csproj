@@ -640,7 +640,6 @@
     <Content Include="App\UiTree\bower_components\jquery\src\var\toString.js" />
     <Content Include="App\UiTree\bower_components\jquery\src\wrap.js" />
     <Content Include="App\UiTree\css\app.css" />
-    <Content Include="App\UiTree\index.html" />
     <Content Include="App\UiTree\js\app.js" />
     <Content Include="App\UiTree\js\basic-example.js" />
     <Content Include="App\UiTree\js\cloning.js" />

@@ -231,14 +231,14 @@
                             for (var i = 0; i < split.length; i++) {
                                 context = context[split[i]];
                             }
-                            scope.tree = context[tree] = elm;
+                            scope.tree = context[tree] = $(elm);
                         }
                         else {
-                            scope.tree = scope.$parent[attrs.tree] = elm;
+                            scope.tree = scope.$parent[attrs.tree] = $(elm);
                         }
 
                     } else {
-                        scope.tree = elm;
+                        scope.tree = $(elm);
                     }
                     scope.tree.jstree('destroy');
                 };
@@ -259,7 +259,9 @@
 
                 nodesWatcher.onAdded = function (node) {
                     $timeout(function () {
-                        while (blocked) { }
+                        while (blocked) {
+                            // empty
+                        }
                         blocked = true;
                         var parent = scope.tree.jstree(true).get_node(node.parent);
                         var res = scope.tree.jstree(true).create_node(parent, node, 'inside', function () {
@@ -272,7 +274,7 @@
                 };
 
                 nodesWatcher.onRemoved = function (node) {
-                    scope.tree.jstree(true).delete_node(node.id);
+                    $(scope.tree).jstree(true).delete_node(node.id);
                 };
 
                 nodesWatcher.subscribe(scope, function () {
